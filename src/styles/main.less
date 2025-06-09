@@ -1,0 +1,171 @@
+    // Importa mapa de cores (você deve ter um arquivo "mapas.less" com as variáveis)
+    @import "mapas.less";
+
+    // Breakpoints
+    @breakpoint-mobile: ~"(max-width: 767px)";
+    @breakpoint-tablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+    // Variáveis
+    @profile-pic-size: 160px;
+
+    // Utilitários
+    .marginBottom8 {
+    margin-bottom: 8px;
+    }
+
+    // Reset e base
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    }
+
+    li {
+    list-style: none;
+    }
+
+    body {
+    background-color: #colors[backgroundColor];
+    color: #colors[textColor];
+    }
+
+    // Container principal
+    .container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+
+    @media screen and (@breakpoint-tablet) {
+        max-width: 85%;
+        padding: 0 20px;
+    }
+
+    @media screen and (@breakpoint-mobile) {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    }
+
+    // Header
+    header {
+    padding-bottom: 24px;
+
+    .profile-pic {
+        display: block;
+        margin: 0 auto 24px;
+        border-radius: 100%;
+        width: @profile-pic-size;
+        height: @profile-pic-size;
+        object-fit: cover;
+
+        @media screen and (@breakpoint-tablet) {
+        width: 120px;
+        height: 120px;
+        }
+
+        @media screen and (@breakpoint-mobile) {
+        width: 96px;
+        height: 96px;
+        }
+    }
+    }
+
+    // Bio do perfil
+    .profile-bio {
+    text-align: center;
+
+    &-name {
+        font-size: 18px;
+        .marginBottom8();
+
+        @media screen and (@breakpoint-mobile) {
+        font-size: 16px;
+        }
+    }
+
+    &-subtitle {
+        font-size: 16px;
+        .marginBottom8();
+
+        @media screen and (@breakpoint-mobile) {
+        font-size: 14px;
+        }
+    }
+
+    &-description {
+        font-size: 14px;
+        opacity: 0.7;
+
+        @media screen and (@breakpoint-mobile) {
+        font-size: 13px;
+        }
+    }
+    }
+
+    // Lista de projetos / links
+    .projects-list {
+    margin-top: 32px;
+
+    &-item {
+        a {
+        text-decoration: none;
+        background-color: #colors[buttonColor];
+        display: block;
+        padding: 16px 40px;
+        margin-bottom: 16px;
+        text-align: center;
+        color: #colors[textColor];
+        font-weight: bold;
+        border-radius: 30px;
+        font-size: 16px;
+
+        &:hover {
+            color: #colors[buttonColor];
+            background-color: transparent;
+            border: 2px solid #colors[buttonColor];
+            transition: all 0.3s ease-in-out;
+        }
+
+        @media screen and (@breakpoint-mobile) {
+            padding: 12px 20px;
+            font-size: 14px;
+        }
+        }
+    }
+    }
+
+    // Links sociais (ícones)
+    .social-links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 240px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media screen and (@breakpoint-mobile) {
+        max-width: 180px;
+    }
+
+    li {
+        img {
+        width: 32px;
+        height: 32px;
+
+        @media screen and (@breakpoint-mobile) {
+            width: 24px;
+            height: 24px;
+        }
+
+        &:hover {
+            transition: all 0.3s ease-in-out;
+            transform: scale(1.1);
+        }
+        }
+    }
+    }
