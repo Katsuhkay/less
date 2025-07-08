@@ -18,11 +18,11 @@ body {
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 0 30px;
+  justify-content: flex-start;
+  padding: 30px;
 }
 @media screen and ((min-width: 768px) and (max-width: 1023px)) {
   .container {
@@ -36,28 +36,36 @@ body {
     padding: 0 15px;
   }
 }
-header {
+.social-nav {
+  padding-top: 15px;
+}
+.apresentação {
+  padding-top: 20px;
   padding-bottom: 24px;
 }
-header .profile-pic {
+.apresentação .profile-pic {
   display: block;
-  margin: 0 auto 24px;
+  margin: 30px auto 24px;
   border-radius: 100%;
   width: 160px;
   height: 160px;
   object-fit: cover;
 }
 @media screen and ((min-width: 768px) and (max-width: 1023px)) {
-  header .profile-pic {
+  .apresentação .profile-pic {
     width: 120px;
     height: 120px;
   }
 }
 @media screen and ((max-width: 767px)) {
-  header .profile-pic {
+  .apresentação .profile-pic {
     width: 96px;
     height: 96px;
   }
+}
+.rodape {
+  padding-top: 25px;
+  text-align: center;
 }
 .profile-bio {
   text-align: center;

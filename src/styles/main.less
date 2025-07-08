@@ -35,11 +35,11 @@
     max-width: 960px;
     width: 100%;
     margin: 0 auto;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0 30px;
+    justify-content: flex-start; // Altera para alinhar no topo
+    padding: 30px; // Espaço uniforme
 
     @media screen and (@breakpoint-tablet) {
         max-width: 85%;
@@ -52,13 +52,18 @@
     }
     }
 
+    .social-nav {
+        padding-top: 15px;
+    }
+
     // Header
-    header {
-    padding-bottom: 24px;
+    .apresentação {
+        padding-top: 20px; // Espaço extra no topo
+        padding-bottom: 24px;
 
     .profile-pic {
         display: block;
-        margin: 0 auto 24px;
+        margin: 30px auto 24px;
         border-radius: 100%;
         width: @profile-pic-size;
         height: @profile-pic-size;
@@ -74,6 +79,12 @@
         height: 96px;
         }
     }
+    }
+
+    // rodapé
+    .rodape {
+        padding-top: 25px;
+        text-align: center;
     }
 
     // Bio do perfil
